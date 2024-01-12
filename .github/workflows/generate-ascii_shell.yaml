@@ -1,0 +1,18 @@
+name: Generate ASCII Workflow
+on: push
+jobs:
+  generate_ascii_job: 
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v4
+
+    - name: welcome Generate Ascii workflow
+      run: echo welcome Generate Ascii workflow
+
+    - name: list files
+      run: ls -lart
+
+    - name: Executing Shell Script
+      run: ./ascii-script.sh
