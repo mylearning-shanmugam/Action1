@@ -3,7 +3,7 @@ name: Generate ASCII Workflow
 on: push
 
 jobs:
-  genrate_ascii_job: 
+  generate_ascii_job: 
     runs-on: ubuntu-latest
     steps:
     - name: checkout repository
@@ -18,7 +18,7 @@ jobs:
     - name: Execute cowsay command
       run: cowsay -f dragon "Run for a cover. I am dragon" >> dragon.txt
 
-   - name: Test file exists
+    - name: Test file exists
       run: |
            ls -lart
            grep -i "dragon" dragon.txt
