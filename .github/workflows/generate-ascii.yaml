@@ -1,10 +1,9 @@
 name: Generate ASCII Workflow
-
 on: push
-
 jobs:
   generate_ascii_job: 
     runs-on: ubuntu-latest
+    
     steps:
     - name: checkout repository
       uses: actions/checkout@v4
@@ -22,3 +21,6 @@ jobs:
       run: |
            ls -lart
            grep -i "dragon" dragon.txt
+
+    - name: Run file
+      run: cat dragon.txt
