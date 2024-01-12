@@ -13,7 +13,7 @@ jobs:
       run: echo welcome Generate Ascii workflow
 
     - name: Install cowsay program
-      run: sudo apt-get cowsay -y
+      run: sudo apt-get install cowsay -y
 
     - name: Execute cowsay command
       run: cowsay -f dragon "Run for a cover. I am dragon" >> dragon.txt
