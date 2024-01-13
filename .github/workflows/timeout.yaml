@@ -1,4 +1,4 @@
-name: concurreny WF
+name: timeout WF
 on: 
   workflow_dispatch:
 env:
