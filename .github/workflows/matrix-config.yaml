@@ -17,6 +17,7 @@ jobs:
          include: 
           - images: amd64/alpine
             os: ubuntu-20.04
+  
     #runs this job in all the above mentioned OS and run all the images
     # windows do not support alpine images. so we could add additional configuration to bypass using exclude option
     # "include" option to include certain only on specific os
