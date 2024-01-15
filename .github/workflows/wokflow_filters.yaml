@@ -9,7 +9,7 @@ on:
     branches:
        - main      # configures your workflow on only run on pull request that target specific branches
 
-  push:
+# push:
    # either you could use branches-ignore or branches or tags or tags-ignore or paths or paths-ignore
    
     # branches-ignore:
