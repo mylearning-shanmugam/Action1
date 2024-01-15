@@ -1,0 +1,30 @@
+name: wokflow filters and Activities
+on: 
+  pull_request:
+    types:
+     - opened
+     - closed
+    paths-ignore:
+      - README.md  # workflow will only run when a pull request that includes a change on any file other than README.md
+    branches:
+       - main      # configures your workflow on only run on pull request that target specific branches
+
+  push:
+   # either you could use branches-ignore or branches or tags or tags-ignore or paths or paths-ignore
+   
+    # branches-ignore:
+    #   - feature/*     # feature/add, feature-update
+    #   - test/**       # test/ui/index, test/checkout/payment
+    # branches:
+    #   - main
+    #   - '!feature/*'  # ignoing pushing to any branch name starting with feature using |
+  
+jobs:
+  first_job: 
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Print Event Name
+      run: |
+           echo "this workflow/job/step is ececuted for event type - ${{github.event_name}}"
+           
