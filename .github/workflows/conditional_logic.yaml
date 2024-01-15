@@ -1,0 +1,21 @@
+name: Conditional_logic
+on: 
+  workflow_dispatch:
+jobs:
+  first_job: 
+    if: github.ref == "refs/heads/main"
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v4
+
+    - name: welcome main workflow
+      run: |
+           echo "my first github actions job"
+           ls -lart
+           cat README.md
+  #  - name: list files
+  #    run: ls
+  #  - name: read files
+  #   run: cat README.md
