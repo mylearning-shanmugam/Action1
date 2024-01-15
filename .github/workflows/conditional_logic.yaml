@@ -12,6 +12,7 @@ jobs:
 
     - name: welcome main workflow
       run: |
+           if: github.ref == 'refs/heads/dd'
            echo "my first github actions job"
            ls -lart
            cat README.md
