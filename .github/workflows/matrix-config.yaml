@@ -14,7 +14,7 @@ jobs:
         exclude: 
           - images: alpine
             os: windows-latest
-         include: 
+        include: 
           - images: amd64/alpine
             os: ubuntu-20.04
   
